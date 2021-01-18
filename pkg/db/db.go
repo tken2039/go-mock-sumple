@@ -4,12 +4,13 @@ import (
 	"fmt"
 )
 
-// DBModel は CreateDB 関数を宣言する interface
+// DBModel は CreateDB(string) string 関数を宣言する interface
 type DBModel interface {
 	CreateDB(string) string
 }
 
-// DB は CreateDB メソッドを持つクラス
+// DB は CreateDB(string) string メソッドを持つクラス
+// すなわち、 DB は interface "DBModel" を暗黙的に実装している
 type DB struct {}
 
 // NewDB は *DB を返却する
