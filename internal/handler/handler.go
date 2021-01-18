@@ -1,8 +1,9 @@
-package main
+package handler
 
 import (
+	"fmt"
         "net/http"
-        "internal/db"
+        "github.com/tken2039/go-mock-sumple/internal/db"
 )
 
 type Handler struct {
@@ -14,5 +15,6 @@ func NewHandler(d db.DBModel) *Handler {
 }
 
 func (h *Handler) CreateHandler(w http.ResponseWriter, r *http.Request) {
-        result := h.DBModel.Create("data")
+	data := "Data"
+	fmt.Fprintf(w, "%s", h.db.CreateDB(data))
 }

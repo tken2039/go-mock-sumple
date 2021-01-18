@@ -5,7 +5,7 @@ import (
 )
 
 type DBModel interface {
-	Create(string) string
+	CreateDB(string) string
 }
 
 type DB struct {}
@@ -15,5 +15,5 @@ func NewDB() *DB {
 }
 
 func (db *DB) CreateDB(data string) string {
-	return fmt.SPrintf("%s %s", "inserted", data)
+	return fmt.Sprintf("%s %s", "inserted", data)
 }
