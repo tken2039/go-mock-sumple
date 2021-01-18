@@ -3,7 +3,7 @@ package handler
 import (
 	"fmt"
         "net/http"
-        "github.com/tken2039/go-mock-sumple/internal/db"
+        "github.com/tken2039/go-mock-sumple/pkg/db"
 )
 
 // Handler は interface "DBModel" 型の変数をメンバに持つ構造体

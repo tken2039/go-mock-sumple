@@ -2,8 +2,8 @@ package main
 
 import (
 	"net/http"
-	"github.com/tken2039/go-mock-sumple/internal/db"
-	"github.com/tken2039/go-mock-sumple/internal/handler"
+	"github.com/tken2039/go-mock-sumple/pkg/db"
+	"github.com/tken2039/go-mock-sumple/pkg/handler"
 )
 
 func main() {
