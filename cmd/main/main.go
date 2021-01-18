@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"net/http"
 	"github.com/tken2039/go-mock-sumple/pkg/db"
 	"github.com/tken2039/go-mock-sumple/pkg/handler"
@@ -18,5 +19,7 @@ func main() {
 
 	// h は Handler クラスなので、 CreateHandler メソッドを呼び出すことができる
 	http.HandleFunc("/", h.CreateHandler)
+
+	fmt.Println("Start server. \nHost: localhost\nPort: 8080\nTry to access \"curl localhost:8080\"")
 	http.ListenAndServe(":8080", nil)
 }
